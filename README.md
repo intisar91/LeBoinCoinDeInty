@@ -1,3 +1,6 @@
-L'appli du pauvre boncoin. Docker container.
-For lunch the container: docker-compose up -d .
+L'appli du pauvre boncoin.
+
+Befor lunching the container: 
+composer install.
+docker-compose up -d .
  PgAdmin DB
