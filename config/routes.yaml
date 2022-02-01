@@ -1,3 +1,7 @@
 index:
   path: /
   controller: App\Controller\QuestionController::homepage
+
+showAd:
+  path: /showAnnonce
+  controller: App\Controller\AdsController::showAnnonce

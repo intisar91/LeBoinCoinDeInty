@@ -15,6 +15,10 @@ class Tag
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
+    // Relation OneToOne
+    /**
+     * @ORM\OneToOne(targetEntity="Annonce")
+     */
     private $id;
 
     /**

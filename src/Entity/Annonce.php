@@ -15,6 +15,18 @@ class Annonce
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
+    // Relation ManyToOne
+    /**
+    * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="annonces")
+    * @ORM\JoinColumn(nullable=true)
+    */
+
+       // Relation OneToOne
+    /**
+     * @ORM\OneToOne(targetEntity="Product")
+     */
+
+
     private $id;
 
     /**

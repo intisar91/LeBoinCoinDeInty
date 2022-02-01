@@ -4,13 +4,14 @@ namespace App\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class QuestionController {
+
+class AdsController {
     /**
     * @Route("/")
     */
-    public function homepage()
+    public function showAnnonce()
     {
-        return new Response('Helloo intisaroo!');
+        return new Response('This is my Annonce! :)');
     }
 }
 ?>

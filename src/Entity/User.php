@@ -16,6 +16,10 @@ class User
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
+      // Relation OneToMany
+     /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Annonce", mappedBy="User")
+     */
     private $id;
 
     /**
