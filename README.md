@@ -1,3 +1,3 @@
-L'appli du pauvre boncoin.
+L'appli du pauvre boncoin. Docker container.
 For lunch the container: docker-compose up -d .
-Docker container. PgAdmin DB
+ PgAdmin DB
