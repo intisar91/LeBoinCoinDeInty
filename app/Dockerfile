@@ -1,3 +1,16 @@
+# 1st stage : build js & css
+FROM node:14-alpine as builder
+
+ENV NODE_ENV=production
+WORKDIR /app
+
+ADD package.json package-lock.json webpack.config.js ./
+ADD assets ./assets
+
+RUN mkdir -p public && \
+    NODE_ENV=development yarn install && \
+    yarn run build
+
 FROM php:7.4-apache
 
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
@@ -17,3 +30,6 @@ RUN docker-php-ext-install pdo pdo_pgsql gd opcache intl zip calendar dom mbstri
 RUN pecl install apcu && docker-php-ext-enable apcu
 
 WORKDIR /var/www/
+
+COPY . .
+COPY --from=builder /app/public/build /var/www/public/build

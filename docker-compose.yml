@@ -2,7 +2,9 @@ version: '3'
 
 services:
   www:
-    build: app
+    build:
+      context: .
+      dockerfile: app/Dockerfile
     container_name: www_docker_symfony
     ports:
       - "8080:80"

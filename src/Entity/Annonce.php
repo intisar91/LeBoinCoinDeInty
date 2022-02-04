@@ -11,20 +11,12 @@ use Doctrine\ORM\Mapping as ORM;
 class Annonce
 {
     /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     */
-    // Relation ManyToOne
-    /**
-    * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="annonces")
-    * @ORM\JoinColumn(nullable=true)
+    * @var integer
+    * @ORM\Column(type="integer")
+    * @ORM\GeneratedValue(strategy="AUTO")
+    * @ORM\Id()
     */
 
-       // Relation OneToOne
-    /**
-     * @ORM\OneToOne(targetEntity="Product")
-     */
 
 
     private $id;
