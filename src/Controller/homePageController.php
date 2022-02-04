@@ -1,16 +1,22 @@
 <?php
 namespace App\Controller;
 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
-class HomePageController {
+use App\Entity\Annonce;
+
+class HomePageController extends AbstractController
+{
     /**
     * @Route("/")
     */
-    public function homepage()
+    public function homepage(Request $request)
     {
-        return new Response('Helloo intisaroo!');
+        return $this->render('base.html.twig');
+
     }
 }
 ?>

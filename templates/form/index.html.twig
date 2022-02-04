@@ -8,7 +8,59 @@
 
 {% block body %}
 
-{{ form(post_form) }}
+
+ <div class="row g-3">
+      <div class="py-5 text-center mt-5">
+                <h2>Ajouter votre annonce</h2>
+                <p class="lead"> Veuillez remplir les champs ci joints pour valider la creation de votre annonce</p>
+              
+                
+            </div>
+            
+                <div class="col-md-12 col-lg-8">
+                    <h4 class="mb-3">Formulaire v2 à venir ..</h4>
+                    <form class="needs-validation" novalidate>
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <label for="firstName" class="form-label">Titre de l'annonce</label>
+                                {{ form(post_form.title) }}            
+                            </div>
+ 
+                            <div class="col-12">
+                                <label for="price">Prix</label>
+                                {{ form(post_form.prix) }} 
+                            
+                            </div>
+                            <div class="col-md-6">
+                                <label for="desc" class="form-label">Description</label>
+                                {{ form(post_form.description) }} 
+                            </div>
+                            
+                        </div>
+                         
+ 
+                        <button class="w-100 btn btn-primary btn-lg" type="submit">Créer l'annonce</button>
+                        
+                    </form>
+                </div>
+            </div>
+        </main>
+ 
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+            <p class="mb-1">© 2022 Le boncoin de intisaroOo </p>
+            <ul class="list-inline">
+                <li class="list-inline-item">
+                    <a href="#">Privacy</a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#">Terms</a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#">Support</a>
+                </li>
+            </ul>
+        </footer>
+    </div>
 
 {% endblock body %}
 

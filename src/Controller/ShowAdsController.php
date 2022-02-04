@@ -20,7 +20,7 @@ class ShowAdsController extends AbstractController
 
         $form = $this -> createForm(CreateAnnonceType::class, $annonce);
         
-        //j'enleve le field
+        //j'enleve le fields
         $form->remove('photo');
         
         return $this->render('form/index.html.twig', [
@@ -28,3 +28,5 @@ class ShowAdsController extends AbstractController
         ]);
     }
 }
+
+?>

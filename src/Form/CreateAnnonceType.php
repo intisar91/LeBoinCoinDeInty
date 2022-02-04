@@ -19,18 +19,34 @@ class CreateAnnonceType extends AbstractType
             ->add('photo', TextType::class)
             ->add('title', TextType::class, [
                 'attr' => [
-                  'placeholder' => "MyTitle", 
-                  'class'  => 'custom_class'
+                  'placeholder' => "Titre",
+                  'type' => "text", 
+                  'class'=> "form-control",
+                  'required',
+                  'id'=> "title"
                 ]
             ])
-            ->add('description', TextareaType::class)
-            ->add('prix', TextType::class)
-            ->add('date', TextType::class)
-            ->add('save', SubmitType::class, [
+            ->add('description', TextareaType::class, [
                 'attr' => [
-                  'class'  => 'btn btn-success'
+                  'placeholder' => "Ceci est une description ...",
+                  'type' => "text", 
+                  'required',
+                  'id'=> "desc",
+                  'rows'=>"10",
+                  'cols'=>"85"
                 ]
-            ]);
+            ])
+            ->add('prix', TextType::class, [
+                'attr' => [
+                  'placeholder' => "ex: 20,..,100€",
+                  'type' => "text", 
+                  'class'=> "form-control",
+                  'required',
+                  'id'=> "price"
+                ]
+            ])
+            ->add('date', TextType::class)
+            ;
     }
 
     public function configureOptions(OptionsResolver $resolver): void
